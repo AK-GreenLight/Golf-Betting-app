@@ -33,7 +33,7 @@ if not st.session_state.round_started:
         st.session_state.round_started = True
         st.session_state.players = players
         st.session_state.scorecard = {p['name']: [] for p in players}
-        st.experimental_rerun()
+        st.rerun()
 
 # ---------------------------
 # Round In Progress
@@ -54,7 +54,7 @@ if st.session_state.round_started:
 
     if st.button("Next Hole"):
         st.success("Hole scores saved.")
-        st.experimental_rerun()
+        st.rerun()
 
     # ---------------------------
     # Leaderboard
